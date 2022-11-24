@@ -71,3 +71,11 @@ const cat = {
 }
 const j = JSON.stringify(cat);
 console.log(j);
+// асинхронные запросы
+async function loadCurrecies(){
+    const res= await fetch('https://www.nbrb.by/api/exrates/currencies');
+    console.log (res);
+     const cuurensies= await res.json();
+     console.log(cuurensies);
+}
+loadCurrecies();
